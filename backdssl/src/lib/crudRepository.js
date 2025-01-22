@@ -23,8 +23,9 @@ class CrudRepository {
     }
 
     async findById(id) {
-        const [rows] = await this.pool.query(`SELECT * FROM ${this.tableName} WHERE id = ?`, [id]);
-        return rows[0];
+        const sql = `SELECT * FROM ${this.tableName} WHERE idDocumento = ?`;
+        const [rows] = await this.pool.query(sql, [id]);
+        return rows[0] || null;
     }
 
     async create(data) {
@@ -33,12 +34,14 @@ class CrudRepository {
     }
 
     async update(id, data) {
-        await this.pool.query(`UPDATE ${this.tableName} SET ? WHERE id = ?`, [data, id]);
+        const sql = `UPDATE ${this.tableName} SET ? WHERE idDocumento = ?`;
+        await this.pool.query(sql, [data, id]);
         return this.findById(id);
     }
 
     async delete(id) {
-        const [result] = await this.pool.query(`DELETE FROM ${this.tableName} WHERE id = ?`, [id]);
+        const sql = `DELETE FROM ${this.tableName} WHERE idDocumento = ?`;
+        const [result] = await this.pool.query(sql, [id]);
         return result.affectedRows > 0;
     }
 }

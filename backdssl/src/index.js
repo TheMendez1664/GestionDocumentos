@@ -1,8 +1,8 @@
 const express = require('express');
 const helmet = require('helmet');
 require('dotenv').config();
-const userController = require('./controllers/userController')
-const rolController = require('./controllers/rolesController')
+const documentoController = require('./controllers/documentController');
+
 const app = express();
 app.use(express.json());
 app.use(helmet());
@@ -16,11 +16,13 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     next();
-  });
+});
 
+// Rutas
+app.use('/documentos', documentoController);
 
-const port= process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
-app.listen(port, ()=>{
-    console.log(`servidor corriendo en http://localhost:${port}`)
-})
+app.listen(port, () => {
+    console.log(`Servidor corriendo en http://localhost:${port}`);
+});
