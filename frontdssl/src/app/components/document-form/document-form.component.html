@@ -1,0 +1,36 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{ isEditMode ? 'Editar Documento' : 'Agregar Documento' }}</h4>
+    <button type="button" class="btn-close" (click)="activeModal.dismiss()"></button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="documentForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="idRemitente" class="form-label">ID Remitente</label>
+        <input type="number" class="form-control" formControlName="idRemitente">
+      </div>
+      <div class="mb-3">
+        <label for="fechaElaboracion" class="form-label">Fecha de Elaboración</label>
+        <input type="date" class="form-control" formControlName="fechaElaboracion">
+      </div>
+      <div class="mb-3">
+        <label for="fechaRecepcion" class="form-label">Fecha de Recepción</label>
+        <input type="date" class="form-control" formControlName="fechaRecepcion">
+      </div>
+      <div class="mb-3">
+        <label for="idTipoDocumento" class="form-label">ID Tipo Documento</label>
+        <input type="number" class="form-control" formControlName="idTipoDocumento">
+      </div>
+      <div class="mb-3">
+        <label for="sumilla" class="form-label">Sumilla</label>
+        <textarea class="form-control" formControlName="sumilla"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="idAreaDestino" class="form-label">ID Área Destino</label>
+        <input type="number" class="form-control" formControlName="idAreaDestino">
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </div>
+    </form>
+  </div>
+  
