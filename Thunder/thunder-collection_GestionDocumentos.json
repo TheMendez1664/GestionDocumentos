@@ -1,0 +1,117 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "GestionDocumentos",
+    "collectionId": "fca8b332-85e9-45f0-9680-5cc4da097e61",
+    "dateExported": "2025-01-22T04:19:53.864Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "ca6e893c-a30d-43a7-a76b-e33679070e17",
+            "colId": "fca8b332-85e9-45f0-9680-5cc4da097e61",
+            "containerId": "",
+            "name": "Obtener todos los documentos",
+            "url": "http://localhost:3000/documentos",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-01-22T03:58:11.916Z",
+            "modified": "2025-01-22T03:59:36.310Z",
+            "headers": []
+        },
+        {
+            "_id": "95cfe6d5-ba14-442f-b335-aae8990287fc",
+            "colId": "fca8b332-85e9-45f0-9680-5cc4da097e61",
+            "containerId": "",
+            "name": "Obtener un documento por ID",
+            "url": "http://localhost:3000/documentos/2",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-01-22T03:58:17.620Z",
+            "modified": "2025-01-22T04:13:04.595Z",
+            "headers": []
+        },
+        {
+            "_id": "c5fb8dfa-fcd7-490f-8d32-2fce29501444",
+            "colId": "fca8b332-85e9-45f0-9680-5cc4da097e61",
+            "containerId": "",
+            "name": "Crear un nuevo documento",
+            "url": "http://localhost:3000/documentos",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2025-01-22T03:58:23.668Z",
+            "modified": "2025-01-22T04:01:59.960Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"idRemitente\": 1,\r\n  \"fechaElaboracion\": \"2024-01-12\",\r\n  \"fechaRecepcion\": \"2024-01-13\",\r\n  \"idTipoDocumento\": 1,\r\n  \"sumilla\": \"Nueva solicitud\",\r\n  \"idAreaDestino\": 2\r\n}\r\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "875b3117-fb3e-41af-a80b-9bdd391f1b66",
+            "colId": "fca8b332-85e9-45f0-9680-5cc4da097e61",
+            "containerId": "",
+            "name": "Actualizar un documento",
+            "url": "http://localhost:3000/documentos/4",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2025-01-22T03:58:39.886Z",
+            "modified": "2025-01-22T04:13:10.397Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"idRemitente\": 1,\n  \"fechaElaboracion\": \"2024-01-15\",\n  \"fechaRecepcion\": \"2024-01-16\",\n  \"idTipoDocumento\": 2,\n  \"sumilla\": \"Solicitud actualizada\",\n  \"idAreaDestino\": 3\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "073aed1e-bd8e-4fbd-86e0-3bc882b72ad1",
+            "colId": "fca8b332-85e9-45f0-9680-5cc4da097e61",
+            "containerId": "",
+            "name": "Eliminar un documento",
+            "url": "http://localhost:3000/documentos/5",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2025-01-22T03:58:49.614Z",
+            "modified": "2025-01-22T04:03:46.112Z",
+            "headers": []
+        },
+        {
+            "_id": "79fb1d12-7567-4c61-bc60-03992fbf118f",
+            "colId": "fca8b332-85e9-45f0-9680-5cc4da097e61",
+            "containerId": "",
+            "name": "Listar documentos por remitente",
+            "url": "http://localhost:3000/documentos/remitente/2",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2025-01-22T03:58:55.615Z",
+            "modified": "2025-01-22T04:17:07.138Z",
+            "headers": []
+        },
+        {
+            "_id": "841cf49d-69c5-481a-b3b2-1876a8060834",
+            "colId": "fca8b332-85e9-45f0-9680-5cc4da097e61",
+            "containerId": "",
+            "name": "Listar documentos por área de destino",
+            "url": "http://localhost:3000/documentos/area/2",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2025-01-22T03:59:01.623Z",
+            "modified": "2025-01-22T04:18:32.791Z",
+            "headers": []
+        },
+        {
+            "_id": "6af154f2-30c0-4077-9701-43a287ad67b8",
+            "colId": "fca8b332-85e9-45f0-9680-5cc4da097e61",
+            "containerId": "",
+            "name": "Listar documentos por tipo de documento",
+            "url": "http://localhost:3000/documentos/tipo/1",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2025-01-22T03:59:07.367Z",
+            "modified": "2025-01-22T04:18:46.580Z",
+            "headers": []
+        }
+    ],
+    "ref": "NeN76j64WZC_TheloyNO_SR5vQ6ZtpzhbtmyARNXF9qdAe2tKZQMc-NorMPuhs7v3hxvZqh45wAq5jEEGMvzwQ"
+}
